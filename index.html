@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/8faa6d18d5.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="kebutuhan/logo.png" class="logo">
+                    <ul>
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <p>Engineering Student</p>
+                    <h1>Hai, I'm <span>Sabella</span><br>From Surabaya, Indonesia</h1>
+                </div>
+            </div>
+        </div>
+
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="kebutuhan/user.png">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title"> About Me </h1>
+                        <p>My full name is Sabella Pinuji Rahayu, I am a student at Instrumentation Engineering ITS. Apart from studying, I am also active in several organizations in ITS, one of which has been part of BK MWA WM ITS 2022 and now as staff at Himatekins ITS. Not only organizations, I also often participate in events and training as a participant and committee held at ITS. I have an interest in programming, especially website development. Currently I can say that I have basic programming skills from C, C++, C#, Java, Pyhton, .NET, 
+                            while for web development from PHP, HTML, a little Javascript, and frameworks such as bootstrap and laravel.</p>
+                        
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Web Development</span><br>Building frontend and backend but focused in frontend</li>
+                                <li><span>Desktop Development</span><br>Building GUI</li>
+                                <li><span>Writing</span><br>Building GUI</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>Coordinator ITDev INFEST</span><br>Responsible for developing the INFEST website such as updating content, extending hosting, and
+                                    others.</li>
+                                <li><span>Assistant Laboratory Instrumentation and Control</span><br>Doing service with the implementation of innovations that have been done.</li>
+                                <li><span>Staff Dagri Himatekins</span><br>Play an active role in all activities organized for the development of the abilities of Himatekins
+                                    cadres in the field of talent interest</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>Sepuluh Nopember Institute of Technology</span><br>Instrumentation Engineering</li>
+                                <li><span>SMK Negeri 1 Surabaya</span><br>Software Engineering</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="portfolio">
+            <div class="container">
+                <h1 class="sub-title">Portfolio</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="kebutuhan/hmi.png">
+                        <div class="layer">
+                            <h3>GUI HMI</h3>
+                            <p>This is the display of the SIS Pressure Tank HMI developed with C#</p>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="kebutuhan/tnp.png">
+                        <div class="layer">
+                            <h3>Technology for Prosperity</h3>
+                            <p>This website is the result of the OLIVIA competition that made it to the final stage.</p>
+                            <a href="https://tnp2023.github.io/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fa-solid fa-envelope"></i>sabellaapr@gmail.com</p>
+                        <p><i class="fa-brands fa-whatsapp"></i>0895354200803</p>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/aaaalleb/"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/sabellapr/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="kebutuhan/CV.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="youremail@gmail.com" required>
+                            <textarea name="Message" rows="6" placeholder="Write your message here"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                        <span id="msg"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>copyright 2023</p>
+        </div>
+
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+        </script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzcUObtiPioQq9ISnsrxEvtU4pqCS6OI5cxZskl8KOB6zWthwPWqDrkLdvE--GuYpUKUw/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Thank you, your message succesfully sent!"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            }, 3000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+    </body>
+</html>
